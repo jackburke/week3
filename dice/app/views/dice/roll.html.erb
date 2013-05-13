@@ -1,0 +1,28 @@
+<h1><%=@result[0]%></h1>
+
+<h1><%=@result[1]%></h1>
+
+<% @point = @result[0] + @result[1] %>
+
+<h2>You rolled <%=@point%><h2>
+
+<% if @result[2] == 1  %>
+<h2> YOU WIN! PLAY AGAIN? </h2>    
+<%=form_tag "/dice" do %>
+     <%= submit_tag("PLAY AGAIN") %>
+     <% end %>
+  
+
+<% elsif @result[2] == 2  %>
+<h2> YOU LOSE! PLAY AGAIN? </h2>    
+<%=form_tag "/dice" do %>
+     <%= submit_tag("PLAY AGAIN") %>
+     <% end %>
+  
+
+<% elsif @result[2] > 3 %>
+<h2> YOUR POINT is <%= @point %> </h2>    
+     <%=form_tag "/dice/midroll" do %>
+     <%= submit_tag("CONTINUE") %>
+    <% end %> 
+<% end %> 

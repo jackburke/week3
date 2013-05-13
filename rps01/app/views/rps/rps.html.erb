@@ -1,0 +1,11 @@
+<h1>This is from ROCK</h1>
+
+<h1><%=@result%></h1>
+
+
+<%=form_tag "/rps/display", :action => "display"  do %>
+     <%= submit_tag('play') %>
+     <% end %>
+<h1><%#=["ROCK","PAPER","SCISSORS", "SUCCESS"].at(@number)%></h1>
+<h1><%=@result_display%></h1>
+

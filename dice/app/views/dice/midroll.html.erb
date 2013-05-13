@@ -1,0 +1,7 @@
+
+<h1>Your point is <%=@result[0]%></h1>
+<h2>Roll your point before rolling a 7 and you win. </h2>
+<h2> If you wish to play on, press re-roll </h2>
+<%= form_tag "reroll" do %>
+<% submit_tag ("REROLL") %>
+<%end%>

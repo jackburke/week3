@@ -1,0 +1,12 @@
+<h1>DICE</h1>
+
+<h2> Roll a 2, 3, or 12, you lose!</h2>
+
+<h2> Roll 7 or 11, you win!</h2>
+
+<h2> Roll anything else, that number becomes your point.</h2>
+<h2> Roll your point  before rolling a 7 and you win!</h2>
+
+<%= form_tag "dice/roll" do %>
+   <%= submit_tag('ROLL') %>
+   <% end %>

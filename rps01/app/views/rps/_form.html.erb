@@ -1,0 +1,16 @@
+<%= form_for(@Rps) do |f| %>
+
+  <div class="field">
+    <%= f.label :rock %><br />
+    <%= f.radio_button_tag :rock %>
+  </div>
+  <div class="field">
+    <%= f.label :paper %><br />
+    <%= f.radio_button_tag :paper %>
+  </div>
+  <div class="field">
+    <%= f.label :scissors %><br />
+    <%= f.radio_button_tag :scissors %>
+  </div>
+
+<% end %>

@@ -1,0 +1,18 @@
+i<h1>You chose ROCK</h1>
+
+<h1>Computer chose <%= ["ROCK", "PAPER", "SCISSORS"].at(@result)%></h1>
+
+<h1><%=["Tie! Play again?", "Computer wins!", "You win."].at(@result)%></h1>
+
+<%=form_tag "/rps/rock", :action => "rock"  do %>
+     <%= submit_tag('ROCK') %>
+     <% end %>
+
+<%=form_tag "/rps/paper", :action => "paper"  do %>
+     <%= submit_tag('PAPER') %>
+     <% end %>
+
+<%=form_tag "/rps/scissors", :action => "scissors"  do %>
+     <%= submit_tag('SCISSORS') %>
+     <% end %>
+

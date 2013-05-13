@@ -1,0 +1,25 @@
+<h1><%=@result[0]%></h1>
+
+<h1><%=@result[1]%></h1>
+
+<h1>Your point is <%=@result[2]%></h1>
+<% @toss = @result[0] + @result[1] %>
+<h1>
+<h2>You rolled <%=@toss%></h2>
+
+<% if @toss == 7 %>
+<h2>YOU LOSE! PLAY AGAIN?</h2>
+<%=form_tag "/dice" do %>
+<%= submit_tag("PLAY AGAIN") %>
+     <% end %>
+<% elsif @toss == @result[2]  %>
+<h2>YOU WIN! PLAY AGAIN?</h2>
+<%=form_tag "/dice" do %>
+<%= submit_tag("PLAY AGAIN") %>
+     <% end %>
+<% else %>
+<h2>YOU CAN ROLL AGAIN</h2>   
+<%=form_tag "reroll" do %>
+<%= submit_tag("ROLL AGAIN") %>
+     <% end %>
+<%end%>
